@@ -4,7 +4,7 @@
   "description": "node cli",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "bin": {
     "nyana": "./bin/nyana.js"
@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/FrankChinedu/node-cli#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "configstore": "^5.0.0",
-    "inquirer": "^7.0.0"
+    "inquirer": "^7.0.0",
+    "keytar-prebuild": "^4.1.1",
+    "mocha": "^6.2.0",
+    "sinon": "^7.4.2"
   }
 }
