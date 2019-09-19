@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 
-const CredentialManager = require('../lib/credential-manager');
+const program = require('commander');
+const pkg = require('../package.json');
 
-async function main() {
-  const cred = new CredentialManager('nyana');
-  let [key, secret] = await cred.getKeyAndSecret();
-  console.log(key, secret)
-}
-
-main().catch(console.error);
+program
+  .version(pkg.version)
+  .command('configure', 'configure twitter-related credentilas')
+  .parse(process.argv)
