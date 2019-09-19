@@ -28,9 +28,8 @@ describe('A credential manager', () => {
      });
    });
 
-   after(() => {
+   after(async () => {
      inquirer.prompt.restore();
-     creds.conf.delete('apiKey');
-     creds.conf.delete('apiSecret');
+     await creds.clearKeyandSecret();
    });
 });
